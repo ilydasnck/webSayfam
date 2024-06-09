@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kişisel Web Sayfam</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #4CAF50;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        section {
+            margin-bottom: 40px;
+        }
+        section h2 {
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            box-shadow: 0 -4px 8px rgba(0,0,0,0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #4CAF50;
+            outline: none;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+        ul li a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        ul li a:hover {
+            text-decoration: underline;
+        }
+        .social-icons a {
+            color: #4CAF50;
+            font-size: 24px;
+            margin-right: 15px;
+        }
+        .social-icons a:hover {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Hoş Geldiniz!</h1>
+</header>
+
+<nav>
+    <a href="#biyografi">Biyografi</a>
+    <a href="#projeler">Projeler</a>
+    <a href="#blog">Blog Yazıları</a>
+    <a href="#iletisim">İletişim</a>
+</nav>
+
+<div class="container">
+    <section id="biyografi">
+        <h2>Biyografi</h2>
+        <img src="https://via.placeholder.com/800x400" alt="Biyografi Görseli">
+        <p>Burada kişisel ve profesyonel geçmişiniz hakkında bilgi verin.</p>
+    </section>
+
+    <section id="projeler">
+        <h2>Projeler</h2>
+        <img src="https://via.placeholder.com/800x400" alt="Projeler Görseli">
+        <p>Burada üzerinde çalıştığınız veya tamamladığınız projelerin listesi ve kısa açıklamaları bulunacak.</p>
+    </section>
+
+    <section id="blog">
+        <h2>Blog Yazıları</h2>
+        <img src="https://via.placeholder.com/800x400" alt="Blog Görseli">
+        <p>Burada kendi yazılarınızı yayınlayabilirsiniz.</p>
+    </section>
+
+    <section id="iletisim">
+        <h2>İletişim Bilgileri</h2>
+        <div>
+            <h3>Sosyal Medya Bağlantıları</h3>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/yourprofile" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://github.com/yourprofile" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+        <div>
+            <h3>CV İndir</h3>
+            <a href="cv/yourcv.pdf" download><i class="fas fa-download"></i> CV İndir</a>
+        </div>
+        <div>
+            <h3>İletişim Formu</h3>
+            <form action="submit_form.php" method="post">
+                <div class="form-group">
+                    <label for="name">Adınız</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-posta</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mesajınız</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit">Gönder</button>
+            </form>
+        </div>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2024 Kişisel Web Sayfam. Tüm Hakları Saklıdır.</p>
+</footer>
+
+</body>
+</html>
